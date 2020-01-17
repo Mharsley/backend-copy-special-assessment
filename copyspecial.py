@@ -59,16 +59,16 @@ def main():
     parser.add_argument('--todir', help='dest dir for special files')
     parser.add_argument('--tozip', help='dest zipfile for special files')
     # TODO need an argument to pick up 'from_dir'
-@@ -38,6 +71,24 @@ def main():
     # required args, the general rule is to print a usage message and exit(1).
 
     # +++your code here+++
-    #print(args)
+    print(args)
+
     if args.dir == '.':
-        #print os.getcwd()
+        print os.getcwd()
         files_to_transfer = get_special_paths(os.getcwd())
-        #print(files_to_transfer)
-        if args.todir :
+        print(files_to_transfer)
+        if args.todir:
             target_dir = args.todir
             print target_dir
             copy_to(files_to_transfer,target_dir)
